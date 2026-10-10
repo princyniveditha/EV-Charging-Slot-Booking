@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register | Society EV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="auth-page">
+    <div class="auth-shell">
+      <div class="auth-card form-card">
+        <p class="eyebrow">Create account</p>
+        <h1>Register resident</h1>
+        <form id="registerForm">
+          <label>
+            Full name
+            <input type="text" name="name" placeholder="Your full name" required />
+          </label>
+          <label>
+            Email
+            <input type="email" name="email" placeholder="you@example.com" required />
+          </label>
+          <label>
+            Phone number
+            <input type="tel" name="phone" placeholder="9876543210" required />
+          </label>
+          <label>
+            Vehicle number
+            <input type="text" name="vehicleNumber" placeholder="KA00AB1234" required />
+          </label>
+          <label>
+            Password
+            <input type="password" name="password" placeholder="Create password" required />
+          </label>
+          <button type="submit" class="primary-btn full-width">Register</button>
+        </form>
+        <p class="switch-link">
+          Already registered? <a href="login.html">Login</a>
+        </p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

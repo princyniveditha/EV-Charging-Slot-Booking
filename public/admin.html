@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard | Society EV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-page">
+    <header class="dashboard-header">
+      <div class="logo-wrap">
+        <div class="logo">EV</div>
+        <div>
+          <p class="brand">GreenLoop Society</p>
+          <small>Resident dashboard</small>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button id="logoutBtn" class="secondary-btn small-btn">Logout</button>
+      </div>
+    </header>
+
+    <main class="dashboard-shell">
+      <aside class="sidebar">
+        <div class="sidebar-card profile-card">
+          <p class="eyebrow">Resident</p>
+          <h2 id="welcomeName">Loading...</h2>
+          <small id="residentEmail">-</small>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Quick stats</h3>
+          <div class="tiny-list">
+            <div><span>Booked</span><strong id="bookedCount">0</strong></div>
+            <div><span>Overstay</span><strong id="overstayCount">0</strong></div>
+            <div><span>Penalty</span><strong id="penaltyTotal">₹0</strong></div>
+          </div>
+        </div>
+      </aside>
+
+      <section class="content-panel">
+        <div class="section-header">
+          <div>
+            <p class="eyebrow">Charging overview</p>
+            <h2>Available stations</h2>
+          </div>
+        </div>
+
+        <div id="stationList" class="station-grid"></div>
+
+        <div class="booking-box">
+          <div class="section-header compact">
+            <div>
+              <p class="eyebrow">Book a slot</p>
+              <h3>Reserve energy</h3>
+            </div>
+          </div>
+
+          <form id="bookingForm" class="booking-form">
+            <label>
+              Station
+              <select id="stationSelect" name="stationId" required></select>
+            </label>
+            <label>
+              Date
+              <input type="date" name="slotDate" required />
+            </label>
+            <label>
+              Start time
+              <input type="time" name="startTime" required />
+            </label>
+            <label>
+              End time
+              <input type="time" name="endTime" required />
+            </label>
+            <label>
+              Vehicle number
+              <input type="text" name="vehicleNumber" placeholder="KA00AB1234" required />
+            </label>
+            <button type="submit" class="primary-btn">Book slot</button>
+          </form>
+        </div>
+
+        <div class="data-panel">
+          <div class="table-card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Bookings</p>
+                <h3>My bookings</h3>
+              </div>
+            </div>
+            <div id="bookingTable" class="table-wrap"></div>
+          </div>
+
+          <div class="table-card">
+            <div class="section-header compact">
+              <div>
+                <p class="eyebrow">Payment & alerts</p>
+                <h3>Penalties</h3>
+              </div>
+            </div>
+            <div id="penaltyTable" class="table-wrap"></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
